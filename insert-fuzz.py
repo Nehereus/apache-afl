@@ -10,20 +10,20 @@
 
 
 # hot-patch #1: Enable fuzzing via stdin
-needle = 'int main(int argc, const char * const argv[])\n{' 
-with open('./server/main.c', 'r') as f:
-    haystack = f.read()
+# needle = 'int main(int argc, const char * const argv[])\n{' 
+# with open('./server/main.c', 'r') as f:
+#     haystack = f.read()
 
-with open('./fuzz.patch.c', 'r') as f:
-    fuzzable = f.read()
+# with open('./fuzz.patch.c', 'r') as f:
+#     fuzzable = f.read()
 
 
-result = haystack.replace(needle, fuzzable)
+# result = haystack.replace(needle, fuzzable)
 
-with open('./server/main.c', 'w') as f:
-    f.write(result)
+# with open('./server/main.c', 'w') as f:
+#     f.write(result)
 
-print('[+] ./server/main.c is patched :^) \n')
+# print('[+] ./server/main.c is patched :^) \n')
 
 
 # hot-patch #2: Disable randomness to improve stability
