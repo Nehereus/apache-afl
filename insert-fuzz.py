@@ -14,7 +14,7 @@ needle = 'int main(int argc, const char * const argv[])\n{'
 with open('./server/main.c', 'r') as f:
     haystack = f.read()
 
-with open('../fuzz.patch.c', 'r') as f:
+with open('./fuzz.patch.c', 'r') as f:
     fuzzable = f.read()
 
 
