@@ -30,7 +30,7 @@ print('[+] ./server/main.c is patched :^) \n')
 with open('./server/core.c', 'r') as f:
     haystack = f.read()
 
-with open('../fuzz.patch.c', 'r') as f:
+with open('./fuzz.patch.c', 'r') as f:
     fuzzable = f.read()
 
 
